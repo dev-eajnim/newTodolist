@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Todo List</title>
+
+    <!-- 글씨체 변경하기 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+
+    <!-- .css 연결 -->
+    <link rel="stylesheet" type="text/css" href="todoList.css">
+
+    <!-- .js 연결 -->
+    <script src="todoList.js"></script>
+</head>
+
+<body>
+    <header>
+        <h2>
+            My todo List
+        </h2>
+    </header>
+
+    <!-- 할일 목록 나옴 -->
+    <div class="divTodoList">
+        <ul class="ulTodo" style="list-style: none;"></ul>
+        <button style="float:right" onclick="getShow()"> 할일 추가 </button>
+    </div>
+
+    <!-- 할일 추가 창 -->
+    <div id="divChangeTodo" style="display: none;">
+        <h2> "할일" </h2>
+        <label>할일</label>
+        <input id="todoContent">
+        <!--여길 클래스로 바꾸면 어떻게 될까? 될까?-->
+        <button onclick="btnSaveTodo()"> 저장 </button>
+        <button onclick="getHide()"> 닫기 </button>
+    </div>
+
+</body>
+
+</html>

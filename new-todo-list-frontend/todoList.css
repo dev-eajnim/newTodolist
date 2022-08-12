@@ -1,0 +1,30 @@
+* {
+    font-family: 'Nanum Pen Script', cursive;
+    font-size:x-large;
+}
+
+header{
+    width: 300px;
+    text-align: center;
+    margin: auto; /* 가운데로 옮격짐 */
+    background-color: yellow;
+}
+
+.divTodoList{
+    width: 500px;
+    height: auto;
+    margin: auto;
+    padding: 40px;
+    background-color: lightblue;
+    border-radius: 30px;
+}
+
+#divChangeTodo{
+    width: 350px;
+    height: 150px;
+    border: 5px solid skyblue;
+    text-align: center;
+    font-size: larger;
+    margin: 15px auto;
+    border-radius: 30px;
+}
