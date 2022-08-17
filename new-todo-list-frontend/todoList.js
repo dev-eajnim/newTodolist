@@ -39,17 +39,18 @@ async function deleteTodo(id) {
     getList();
 }
 async function btnSaveTodo() {
-    console.log(selectedId)
+    //console.log(selectedId)
     if (selectedId) {
-        updateTodo();
+        await updateTodo(selectedId);
     } else {
-        createTodo();
+        await createTodo();
     }
     getList();
 }
 
 async function updateTodo(id) {
-    let todo = fetch(`http://localhost:3000/todolist/${id}`, {
+    const td = document.querySelector('#todoContent').value;
+    let todo = await fetch(`http://localhost:3000/todolist/${id}`, {
         method: 'PATCH',
         headers: {
             'Content-Type': 'application/json;charset=utf-8'
@@ -62,7 +63,6 @@ async function updateTodo(id) {
     }).catch(() => {
         alert("에러");
     })
-    getList(); //여기서 저장을 안해줘도 되네? - patch한게 수정&저장된 거임
 }
 
 async function createTodo() {
@@ -84,7 +84,6 @@ async function createTodo() {
     }).catch(() => {
         alert("에러");
     })
-    getList();
 }
 
 function getShow() {

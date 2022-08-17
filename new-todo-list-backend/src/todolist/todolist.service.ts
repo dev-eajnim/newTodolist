@@ -35,15 +35,6 @@ export class TodolistService {
 
   async toggle(id: number) { //: Promise<{chk:boolean}>
     let todo = await this.todoRepository.findOne({ where: { id } });
-    // if(todo){
-    //   todo={
-    //     ...todo,
-    //     chk : !todo.chk
-    //   }
-    //   this.todoRepository.save(todo);
-    // }else{
-    //   return todo;
-    // }
     todo={
       ...todo,
       chk : !todo.chk
