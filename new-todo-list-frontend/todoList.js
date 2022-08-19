@@ -24,7 +24,6 @@ async function getList() {
             <button onclick="deleteTodo(${l.id})">삭제</button>
         `;
         ul.append(li);
-        selectedId = li.id;
     }
 }
 
@@ -39,7 +38,6 @@ async function deleteTodo(id) {
     getList();
 }
 async function btnSaveTodo() {
-    //console.log(selectedId)
     if (selectedId) {
         await updateTodo(selectedId);
     } else {
@@ -67,7 +65,6 @@ async function updateTodo(id) {
 
 async function createTodo() {
     const td = document.querySelector('#todoContent').value;
-    console.log(td);
 
     await fetch('http://localhost:3000/todolist', {
         method: 'POST',
